@@ -13,9 +13,7 @@
     <script type="text/javascript" src="libs/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <script id="toolbar-tpl-scriptId" prod="so" skin="black" src="http://c.csdnimg.cn/public/common/toolbar/js/html.js" domain="http://so.csdn.net/so/" type="text/javascript"></script>
-<!--
     <script id="csdn-toolbar-id" btnId="header_notice_num" wrapId="note1" count="5" subCount="5" type="text/javascript" src="http://static.csdn.net/public/common/toolbar/js/toolbar.js"></script>
--->
 
     <!-- 代码段highlighter -->
     <link type="text/css" rel="stylesheet" href="libs/syntaxhighlighter_3.0.83/styles/shCore.css"/>
@@ -31,7 +29,6 @@
     <script class="javascript" src="libs/syntaxhighlighter_3.0.83/scripts/shBrushPhp.js"></script>
     <script class="javascript" src="libs/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
     <script class="javascript" src="libs/syntaxhighlighter_3.0.83/scripts/shBrushPython.js"></script>
-    <script class="javascript" src="libs/syntaxhighlighter_3.0.83/scripts/shBrushRuby.js"></script>
     <style type="text/css">
         /** 改一下字号大小，否则格式化后的代码会很大 */
         .syntaxhighlighter {
@@ -61,7 +58,7 @@
         <div class="code_key_word">
             <span class="code_key_label fl">代码片关键词:</span>
             <ul class="clearfix key_word_list">
-                <li class="fl active" data-language="java" data-key-words="1"><a href="index.html">Java+jsp</a></li>
+                <li class="fl" data-language="java" data-key-words="1"><a href="index.html">Java+jsp</a></li>
                 <li class="fl" data-language="java" data-key-words="2"><a href="code2.html">java+Struts2</a></li>
                 <li class="fl" data-language="java" data-key-words="3"><a href="code3.html">Java+Spring</a></li>
                 <li class="fl" data-language="java" data-key-words="4"><a href="code4.html">JDBC+java</a></li>
@@ -111,22 +108,22 @@
                             <div class="score_table">
                                 <table class="table table-bordered table-condensed text-center">
                                     <thead>
-                                        <tr><th>名称</th><th>得分</th></tr>
+                                    <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
                                     <tbody id="record_tbody1">
-                                        <!--<tr><td>total</td><td>50.0</td></tr>
-                                        <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
-                                        <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
-                                        <tr><td>blank</td><td>0.0 = 0.0450*0.0</td></tr>
-                                        <tr><td>indent</td><td>0.0 = 0.0800*0.0</td></tr>
-                                        <tr><td>complexity</td><td>10.0 = 0.1000*100.0</td></tr>
-                                        <tr><td>integrity</td><td>10.5 = 0.1500*70.0</td></tr>
-                                        <tr><td>lineWidth</td><td>1.5 = 0.0150*100.0</td></tr>
-                                        <tr><td>efficiency</td><td>0.0 = 0.0300*0.0</td></tr>
-                                        <tr><td>lineOfCode</td><td>12.5 = 0.1250*100.0</td></tr>
-                                        <tr><td>blog</td><td>6.5 = 0.0750*86.9</td></tr>
-                                        <tr><td>comments</td><td>6.0 = 0.1500*40.0</td></tr>
-                                        <tr><td>grammar</td><td>3.0 = 0.0300*100.0</td></tr>-->
+                                    <!--<tr><td>total</td><td>50.0</td></tr>
+                                    <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
+                                    <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
+                                    <tr><td>blank</td><td>0.0 = 0.0450*0.0</td></tr>
+                                    <tr><td>indent</td><td>0.0 = 0.0800*0.0</td></tr>
+                                    <tr><td>complexity</td><td>10.0 = 0.1000*100.0</td></tr>
+                                    <tr><td>integrity</td><td>10.5 = 0.1500*70.0</td></tr>
+                                    <tr><td>lineWidth</td><td>1.5 = 0.0150*100.0</td></tr>
+                                    <tr><td>efficiency</td><td>0.0 = 0.0300*0.0</td></tr>
+                                    <tr><td>lineOfCode</td><td>12.5 = 0.1250*100.0</td></tr>
+                                    <tr><td>blog</td><td>6.5 = 0.0750*86.9</td></tr>
+                                    <tr><td>comments</td><td>6.0 = 0.1500*40.0</td></tr>
+                                    <tr><td>grammar</td><td>3.0 = 0.0300*100.0</td></tr>-->
                                     </tbody>
                                 </table>
                                 <a class="score_desc" data-toggle="modal" href="#modal-recordDesc">分数计算过程说明<i class="fa fa-question-circle"></i></a>
@@ -233,7 +230,7 @@
                         </div>
                     </div>
                 </dd>
-                <dd class="code_segment_con">
+                <!--<dd class="code_segment_con">
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-3">
                             <div class="score_table">
@@ -242,7 +239,7 @@
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
                                     <tbody  id="record_tbody2">
-                                    <!--<tr><td>total</td><td>50.0</td></tr>
+                                    &lt;!&ndash;<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
                                     <tr><td>blank</td><td>0.0 = 0.0450*0.0</td></tr>
@@ -254,7 +251,7 @@
                                     <tr><td>lineOfCode</td><td>12.5 = 0.1250*100.0</td></tr>
                                     <tr><td>blog</td><td>6.5 = 0.0750*86.9</td></tr>
                                     <tr><td>comments</td><td>6.0 = 0.1500*40.0</td></tr>
-                                    <tr><td>grammar</td><td>3.0 = 0.0300*100.0</td></tr>-->
+                                    <tr><td>grammar</td><td>3.0 = 0.0300*100.0</td></tr>&ndash;&gt;
                                     </tbody>
                                 </table>
                                 <a class="score_desc" data-toggle="modal" href="#modal-recordDesc">分数计算过程说明<i class="fa fa-question-circle"></i></a>
@@ -264,12 +261,12 @@
                             <div class="code_snippets">
                                 <h5 class="clearfix code_snippets_header">
                                     <div id="codeHeaderTips2" class="pull-left">
-                                        <!--<i class="fa fa-file-text-o"></i>
+                                        &lt;!&ndash;<i class="fa fa-file-text-o"></i>
                                         <span>42行</span>
                                         <span>java</span>
                                         <span>作者：<small>u013248470</small></span>
                                         <span>时间：<small>2015-07-01 11:26:19</small></span>
-                                        <span>质量分：<small>95.95</small></span>-->
+                                        <span>质量分：<small>95.95</small></span>&ndash;&gt;
                                     </div>
                                     <div class="btn-group pull-right" role="group" aria-label="...">
                                         <button type="button" class="btn btn-default btn-expand-collapse tracking-ad" data-mod="popu_180"><a href="javascript:;" target="_blank">展开</a></button>
@@ -278,83 +275,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody2" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        &lt;!&ndash;<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>&ndash;&gt;
                                     </div>
                                 </div>
                             </div>
@@ -370,7 +367,7 @@
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
                                     <tbody id="record_tbody3">
-                                    <!--<tr><td>total</td><td>50.0</td></tr>
+                                    &lt;!&ndash;<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
                                     <tr><td>blank</td><td>0.0 = 0.0450*0.0</td></tr>
@@ -382,7 +379,7 @@
                                     <tr><td>lineOfCode</td><td>12.5 = 0.1250*100.0</td></tr>
                                     <tr><td>blog</td><td>6.5 = 0.0750*86.9</td></tr>
                                     <tr><td>comments</td><td>6.0 = 0.1500*40.0</td></tr>
-                                    <tr><td>grammar</td><td>3.0 = 0.0300*100.0</td></tr>-->
+                                    <tr><td>grammar</td><td>3.0 = 0.0300*100.0</td></tr>&ndash;&gt;
                                     </tbody>
                                 </table>
                                 <a class="score_desc" data-toggle="modal" href="#modal-recordDesc">分数计算过程说明<i class="fa fa-question-circle"></i></a>
@@ -392,12 +389,12 @@
                             <div class="code_snippets">
                                 <h5 class="clearfix code_snippets_header">
                                     <div id="codeHeaderTips3" class="pull-left">
-                                        <!--<i class="fa fa-file-text-o"></i>
+                                        &lt;!&ndash;<i class="fa fa-file-text-o"></i>
                                         <span>42行</span>
                                         <span>java</span>
                                         <span>作者：<small>u013248470</small></span>
                                         <span>时间：<small>2015-07-01 11:26:19</small></span>
-                                        <span>质量分：<small>95.95</small></span>-->
+                                        <span>质量分：<small>95.95</small></span>&ndash;&gt;
                                     </div>
                                     <div class="btn-group pull-right" role="group" aria-label="...">
                                         <button type="button" class="btn btn-default btn-expand-collapse tracking-ad" data-mod="popu_180"><a href="javascript:;" target="_blank">展开</a></button>
@@ -406,89 +403,89 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody3" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        &lt;!&ndash;<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>&ndash;&gt;
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </dd>
+                </dd>-->
             </dl>
             <dl class="code_segment">
                 <dt class="code_segment_tit">60~80分<span>Java+jsp</span>代码片</dt>
@@ -500,7 +497,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody4">
+                                    <tbody id="record_tbody2">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -537,83 +534,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody4" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -628,7 +625,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody5">
+                                    <tbody id="record_tbody3">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -756,7 +753,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody6">
+                                    <tbody id="record_tbody4">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -887,7 +884,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody7">
+                                    <tbody id="record_tbody5">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -924,83 +921,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody7" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -1015,7 +1012,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody8">
+                                    <tbody id="record_tbody6">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -1143,7 +1140,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody9">
+                                    <tbody id="record_tbody7">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -1180,83 +1177,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody9" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -1274,7 +1271,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody10">
+                                    <tbody id="record_tbody8">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -1311,83 +1308,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody10" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -1402,7 +1399,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody  id="record_tbody11">
+                                    <tbody  id="record_tbody9">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -1439,83 +1436,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody11" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -1530,7 +1527,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody12">
+                                    <tbody id="record_tbody10">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -1567,83 +1564,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody12" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -1661,7 +1658,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody13">
+                                    <tbody id="record_tbody11">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -1698,83 +1695,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody13" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -1789,7 +1786,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody14">
+                                    <tbody id="record_tbody12">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -1826,83 +1823,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody14" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -1917,7 +1914,7 @@
                                     <thead>
                                     <tr><th>名称</th><th>得分</th></tr>
                                     </thead>
-                                    <tbody id="record_tbody15">
+                                    <tbody id="record_tbody13">
                                     <!--<tr><td>total</td><td>50.0</td></tr>
                                     <tr><td>naming</td><td>0.0 = 0.1300*0.0</td></tr>
                                     <tr><td>execute</td><td>0.0 = 0.0700*0.0</td></tr>
@@ -1954,83 +1951,83 @@
                                 </h5>
                                 <div class="snippets_con">
                                     <div id="codeBody15" class="file_content">
-                                            <!--<pre class="brush: java;toolbar:false;">
-                                                import java.security.Key;
-                                                import java.security.Security;
+                                        <!--<pre class="brush: java;toolbar:false;">
+                                            import java.security.Key;
+                                            import java.security.Security;
 
-                                                import javax.crypto.Cipher;
-                                                import javax.crypto.KeyGenerator;
-                                                import javax.crypto.SecretKey;
-                                                import javax.crypto.SecretKeyFactory;
-                                                import javax.crypto.spec.DESKeySpec;
-                                                import javax.crypto.spec.IvParameterSpec;
+                                            import javax.crypto.Cipher;
+                                            import javax.crypto.KeyGenerator;
+                                            import javax.crypto.SecretKey;
+                                            import javax.crypto.SecretKeyFactory;
+                                            import javax.crypto.spec.DESKeySpec;
+                                            import javax.crypto.spec.IvParameterSpec;
 
-                                                import net.blogjava.frankiegao123.util.lang.ByteUtil;
+                                            import net.blogjava.frankiegao123.util.lang.ByteUtil;
 
-                                                import org.bouncycastle.jce.provider.BouncyCastleProvider;
+                                            import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-                                                public class BcTest {
+                                            public class BcTest {
 
-                                                    static {
-                                                        Security.addProvider(new BouncyCastleProvider());
-                                                    }
-
-                                                    public static void main(String[] args) throws Exception {
-
-                                                        byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
-                                                        IvParameterSpec iv = initIV();
-                                                        byte[] data = "01234567".getBytes();
-                                                        byte[] crypt = encrypt(data, key, iv);
-                                                        byte[] plain = decrypt(crypt, key, iv);
-                                                        //
-                                                        System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
-                                                        System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
-                                                        System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
-                                                        System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
-                                                    }
-
-                                                    public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.DECRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(crypt);
-                                                    }
-
-                                                    public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
-                                                            throws Exception {
-                                                        Key k = toKey(key);
-                                                        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
-                                                        cipher.init(Cipher.ENCRYPT_MODE, k, iv);
-                                                        return cipher.doFinal(data);
-                                                    }
-
-                                                    public static IvParameterSpec initIV() {
-                                                        return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-                                                    }
-
-                                                    public static byte[] initKey() throws Exception {
-                                                        KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
-                                                        kg.init(64);
-                                                        SecretKey key = kg.generateKey();
-                                                        return key.getEncoded();
-                                                    }
-
-                                                    public static SecretKey toKey(byte[] key) throws Exception {
-                                                        DESKeySpec dks = new DESKeySpec(key);
-                                                        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
-                                                        return keyFactory.generateSecret(dks);
-                                                    }
-
-                                                    public static byte[] toByte(int... nums) {
-                                                        byte[] bys = new byte[nums.length];
-                                                        for (int i = 0; i < nums.length; i++) {
-                                                            bys[i] = (byte) nums[i];
-                                                        }
-                                                        return bys;
-                                                    }
+                                                static {
+                                                    Security.addProvider(new BouncyCastleProvider());
                                                 }
-                                            </pre>-->
+
+                                                public static void main(String[] args) throws Exception {
+
+                                                    byte[] key = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                                                    IvParameterSpec iv = initIV();
+                                                    byte[] data = "01234567".getBytes();
+                                                    byte[] crypt = encrypt(data, key, iv);
+                                                    byte[] plain = decrypt(crypt, key, iv);
+                                                    //
+                                                    System.out.println("  key: " + ByteUtil.bytes2HexSpace(key));
+                                                    System.out.println(" data: " + ByteUtil.bytes2HexSpace(data));
+                                                    System.out.println("crypt: " + ByteUtil.bytes2HexSpace(crypt));
+                                                    System.out.println("plain: " + ByteUtil.bytes2HexSpace(plain));
+                                                }
+
+                                                public static byte[] decrypt(byte[] crypt, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.DECRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(crypt);
+                                                }
+
+                                                public static byte[] encrypt(byte[] data, byte[] key, IvParameterSpec iv)
+                                                        throws Exception {
+                                                    Key k = toKey(key);
+                                                    Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding", "BC");
+                                                    cipher.init(Cipher.ENCRYPT_MODE, k, iv);
+                                                    return cipher.doFinal(data);
+                                                }
+
+                                                public static IvParameterSpec initIV() {
+                                                    return new IvParameterSpec(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+                                                }
+
+                                                public static byte[] initKey() throws Exception {
+                                                    KeyGenerator kg = KeyGenerator.getInstance("DES", "BC");
+                                                    kg.init(64);
+                                                    SecretKey key = kg.generateKey();
+                                                    return key.getEncoded();
+                                                }
+
+                                                public static SecretKey toKey(byte[] key) throws Exception {
+                                                    DESKeySpec dks = new DESKeySpec(key);
+                                                    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES", "BC");
+                                                    return keyFactory.generateSecret(dks);
+                                                }
+
+                                                public static byte[] toByte(int... nums) {
+                                                    byte[] bys = new byte[nums.length];
+                                                    for (int i = 0; i < nums.length; i++) {
+                                                        bys[i] = (byte) nums[i];
+                                                    }
+                                                    return bys;
+                                                }
+                                            }
+                                        </pre>-->
                                     </div>
                                 </div>
                             </div>
@@ -2156,11 +2153,6 @@
 
 <script type="text/javascript">
     $(function(){
-        /*var $idsList = DataAssembly.AssemIds('1');
-        CodeAjax.commonCodeAjax($idsList);
-        setTimeout(function(){
-            CodeAjax.commonRecordAjax($idsList);
-        },2000)*/
         var _url = document.location.href;
         $('.key_word_list a').each(function(){
             if(_url.indexOf($(this).attr('href')) > -1){
@@ -2171,7 +2163,7 @@
                 CodeAjax.commonCodeAjax($idsList);
                 setTimeout(function(){
                     CodeAjax.commonRecordAjax($idsList);
-                },1000)
+                },1500)
             }
         });
 
