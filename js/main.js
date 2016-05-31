@@ -81,7 +81,7 @@ CodeIdsData = {
         "60-80": ["blog;;8796404;;0", "blog;;2620792;;0", "blog;;50243595;;0"],
         "40-60": ["blog;;7238890;;0", "blog;;47657253;;2", "blog;;50807323;;0"],
         "20-40": ["blog;;45579107;;0", "blog;;11653095;;0", "blog;;9721153;;2"],
-        "0-20": ["blog;;8978141;;0", "blog;;2515552;;0", "blog;;38109643;;0"]
+        "0-20": ["blog;;38109643;;0", "blog;;2515552;;0", "blog;;38109643;;0"]
     },
     /*文件操作+C#*/
     "11": {
@@ -129,7 +129,7 @@ CodeIdsData = {
         "60-80": ["blog;;9032445;;0", "blog;;38868303;;0", "blog;;7823056;;0"],
         "40-60": ["blog;;8494495;;0", "blog;;6732150;;4", "blog;;8219625;;0"],
         "20-40": ["blog;;45579107;;0", "blog;;11653095;;0", "blog;;9721153;;2"],
-        "0-20": ["blog;;8978141;;0", "blog;;20626093;;7", "blog;;7617039;;0"]
+        "0-20": ["blog;;8978141;;0", "blog;;19172755;;0", "blog;;7617039;;0"]
     },
     /*表单事件+javascript*/
     "17": {
@@ -208,7 +208,7 @@ CodeIdsData = {
         "60-80": ["blog;;49556109;;0", "blog;;7072802;;0", "blog;;41080357;;0"],
         "40-60": ["blog;;45391765;;0", "blog;;50770799;;6", "blog;;49869071;;3"],
         "20-40": ["blog;;8107477;;0", "blog;;7822502;;0", "blog;;50241239;;0"],
-        "0-20": ["blog;;48319437;;0", "blog;;50929692;;0", "blog;;41074363;;0"]
+        "0-20": ["blog;;48319437;;0", "blog;;50929692;;0", "blog;;46654003;;0"]
     },
     /*cactch+PHP*/
     "27": {
@@ -330,7 +330,7 @@ DataAssembly = {
         if(temArr5.length > 0){
             $resObjData['0~20'] = temArr5;
         }
-        console.log($resObjData);
+        /*console.log($resObjData);*/
         return $resObjData;
     }
 }
@@ -389,7 +389,7 @@ CodeAjax = {
 
 /******************************** EVENT **********************************************/
 //code 展开收起
-$(".btn-expand-collapse").click(function(){
+$(".code_section").on("click",".btn-expand-collapse",function(){
     var $fileHolder = $(this).closest("h5").next(".snippets_con");
     var $codeHeight = $fileHolder.find(".file_content").height();
     if($(this).text() === "展开"){
@@ -402,7 +402,7 @@ $(".btn-expand-collapse").click(function(){
 });
 
 // code 全屏 退出全屏
-$(".btn-fullscreen").click(function(){
+$(".code_section").on("click",".btn-fullscreen",function(){
     var $fileHolder = $(this).closest("h5").next(".snippets_con");
     var $codeHeight = $fileHolder.find(".file_content").height();
     var h = window.innerHeight;
