@@ -2,7 +2,7 @@
  * Created by zhangw on 2016-5-23.
  */
 
-/* DATA */
+/************************************ DATA *************************************************/
 CodeIdsData = {
     "1":{
         "80-100":["blog;;6790560;;0","blog;;47171565;;2","blog;;8184175;;1"],
@@ -65,7 +65,7 @@ CodeIdsData = {
         "60-80": ["blog;;16892997;;0", "blog;;17028421;;0", "blog;;38425585;;0"],
         "40-60": ["blog;;48750159;;0", "blog;;42033695;;1", "blog;;46005293;;0"],
         "20-40": ["blog;;40003185;;0", "blog;;6601123;;23", "blog;;26726625;;1"],
-        "0-20": ["blog;;41773981;;3", "blog;;8950168;;0", "blog;;8885075;;0"]
+        "0-20": ["blog;;12406147;;4", "blog;;8950168;;0", "blog;;8885075;;0"]
     },
     /*多线程+C#*/
     "9": {
@@ -95,7 +95,7 @@ CodeIdsData = {
     "12": {
         "80-100": ["blog;;50525692;;0", "blog;;7312752;;0", "blog;;7063302;;37"],
         "60-80": ["blog;;47127467;;0", "blog;;47169159;;0", "blog;;7063302;;36"],
-        "40-60": ["blog;;47166201;;0", "blog;;7340020;;0", "blog;;50492395;;0;;0"],
+        "40-60": ["blog;;47166201;;0", "blog;;7340020;;0", "blog;;50492395;;0"],
         "20-40": ["blog;;49667247;;0", "blog;;7001456;;0", "blog;;50516682;;0"],
         "0-20": ["blog;;8978141;;0", "blog;;38109643;;0", "blog;;48495043;;0"]
     },
@@ -106,13 +106,14 @@ CodeIdsData = {
         "40-60": ["blog;;8844033;;0", "blog;;7783522;;0", "blog;;7694104;;0"],
         "20-40": ["blog;;45579107;;0", "blog;;11653095;;0", "blog;;6883311;;5"],
         "0-20": ["blog;;8978141;;0", "blog;;38109643;;0", "blog;;19172755;;0"]
-    },/*WPF+C#*/
+    },
+    /*WPF+C#*/
     "14": {
         "80-100": ["blog;;50829828;;28", "blog;;20639421;;0", "blog;;8373215;;0"],
         "60-80": ["blog;;9032445;;0", "blog;;9163851;;0", "blog;;46865829;;0"],
         "40-60": ["blog;;16918201;;1", "blog;;6732150;;4", "blog;;6732166;;7"],
         "20-40": ["blog;;45579107;;0", "blog;;11653095;;0", "blog;;9721153;;2"],
-        "0-20": ["blog;;8978141;;0", "blog;;20626093;;7", "blog;;19168259;;0"]
+        "0-20": ["blog;;19172755;;0", "blog;;38109643;;0", "blog;;20686113;;33"]
     },
     /*UWP+C#*/
     "15": {
@@ -120,7 +121,7 @@ CodeIdsData = {
         "60-80": ["blog;;9032445;;0", "blog;;9163851;;0", "blog;;8373202;;0"],
         "40-60": ["blog;;17284003;;0", "blog;;51281093;;0", "blog;;8588510;;0"],
         "20-40": ["blog;;48053769;;0", "blog;;45579107;;0", "blog;;11653095;;0"],
-        "0-20": ["blog;;8978141;;0", "blog;;38109643;;0", "blog;;19172755;;0"]
+        "0-20": ["blog;;8579028;;0", "blog;;38109643;;0", "blog;;19172755;;0"]
     },
     /*Silverlight+C#*/
     "16": {
@@ -231,7 +232,7 @@ CodeIdsData = {
         "60-80": ["blog;;7191298;;0", "blog;;8649170;;0", "blog;;7432485;;0"],
         "40-60": ["blog;;17390905;;0", "blog;;51158427;;3", "blog;;8955647;;4"],
         "20-40": ["blog;;9173511;;0", "blog;;40047779;;0", "blog;;7316056;;0"],
-        "0-20": ["blog;;17013295;;0", "blog;;7724449;;0", "blog;;22155199;;0"]
+        "0-20": ["blog;;17013295;;0", "blog;;7724449;;0", "blog;;12844577;;11"]
     },
     /*Session+PHP（80以上只有1个）*/
     "30": {
@@ -282,100 +283,7 @@ CodeIdsData = {
         "0-20": ["blog;;6981888;;1", "blog;;51305719;;0", "blog;;50770467;;0"]
     }
 }
-/* FUNC */
-
-//Ajax
-CodeAjax = {
-    commonCodeAjax:  function ($idsList) {
-        var curIndex=0;//退出递归的条件变量
-        function newCodeRequest(){
-            if(curIndex>=$idsList.length){
-                return;
-            }
-            var ids = $idsList[curIndex];
-            var $codeHeaderTips = "", $codeBody="";
-            $.ajax({
-                type: 'GET',
-                /*url: 'http://dg.dm.csdn.net/batch/content?fields=all&ids=' + ids + '&type=codes_snippet&callback=func',*/
-                url: 'http://internalapi.csdn.net/knowledge/public/public/api/newCode?x-acl-token=9DeJLGuYSy/6nSmDQen5amEWUh0K&fields=all&ids=' + ids + '&type=codes_snippet&callback=func',
-                /*async: false,*/
-                dataType: 'jsonp',
-                jsonp : 'callback',
-                jsonpCallback : 'func',
-                complete:function(resObj){
-                    curIndex++;
-                    var $responseJson = resObj['responseJSON'];
-                    /*console.log($responseJson);*/
-                    $codeHeaderTips = "<i class='fa fa-file-text-o'></i>"
-                        +"<span>" + $responseJson[0]['snippet_line'] + "行</span>"
-                        +"<span>" + $responseJson[0]['language'] + "</span>"
-                        +"<span>作者：<small>" + $responseJson[0]['source_user_name'] + "</small></span>"
-                        +"<span>时间：<small>" + $responseJson[0]['created_at'] + "</small></span>"
-                        +"<span class='quality_score'>质量分：<small></small></span>";
-                        $("#codeHeaderTips"+curIndex).html($codeHeaderTips);
-                        var $languageType = "";
-                        if($responseJson[0]['language'] === "java"){
-                            $languageType = "java";
-                        }else if($responseJson[0]['language'] === "python"){
-                            $languageType = "python";
-                        }else if($responseJson[0]['language'] === "csharp"){
-                            $languageType = "c-sharp";
-                        }else if($responseJson[0]['language'] === "javascript"){
-                            $languageType = "js";
-                        }else if($responseJson[0]['language'] === "php"){
-                            $languageType = "php";
-                        }
-                        $codeBody = "<pre name='code' class='brush: " + $languageType + ";'>" + $responseJson[0]['body'] + "</pre>";
-                        $("#codeBody"+curIndex).html($codeBody);
-                    newCodeRequest();
-                }
-            });
-        }
-        newCodeRequest();
-    },
-    commonRecordAjax : function($idsList){
-        var currentIndex=0;//退出递归的条件变量
-        function newRecordRequest(){
-            if(currentIndex>=$idsList.length){
-                return;
-            }
-            var ids = $idsList[currentIndex];
-            var $tbody_content = "";
-            $.ajax({
-                type: 'GET',
-                /*url: 'http://cg.dm.csdn.net/code/snippet/score2?id=' + ids + '&callback=func',*/
-                url: 'http://internalapi.csdn.net/knowledge/public/public/api/newRecord?x-acl-token=9DeJLGuYSy/6nSmDQen5amEWUh0K&id=' + ids + '&callback=func',
-                /*async: false,*/
-                dataType: 'jsonp',
-                jsonp : 'callback',
-                jsonpCallback : 'func',
-                complete:function(responseObj){
-                    currentIndex++;
-                    var $resJson = responseObj['responseJSON'];
-                    /*console.log($resJson);*/
-                    $tbody_content = "<tr><td>total</td><td>" + $resJson.total + "</td></tr>"
-                        +"<tr><td>naming</td><td>" + $resJson.naming + "</td></tr>"
-                        +"<tr><td>execute</td><td>" + $resJson.execute + "</td></tr>"
-                        +"<tr><td>blank</td><td>" + $resJson.blank + "</td></tr>"
-                        +"<tr><td>indent</td><td>" + $resJson.indent + "</td></tr>"
-                        +"<tr><td>complexity</td><td>" + $resJson.complexity + "</td></tr>"
-                        +"<tr><td>integrity</td><td>" + $resJson.integrity + "</td></tr>"
-                        +"<tr><td>lineWidth</td><td>" + $resJson.lineWidth + "</td></tr>"
-                        +"<tr><td>efficiency</td><td>" + $resJson.efficiency + "</td></tr>"
-                        +"<tr><td>lineOfCode</td><td>" + $resJson.lineOfCode + "</td></tr>"
-                        +"<tr><td>blog</td><td>" + $resJson.blog + "</td></tr>"
-                        +"<tr><td>comments</td><td>" + $resJson.comments + "</td></tr>"
-                        +"<tr><td>grammar</td><td>" + $resJson.grammar + "</td></tr>";
-                    $("#record_tbody"+currentIndex).html($tbody_content);
-                    $("#codeHeaderTips"+currentIndex).find('.quality_score small').html($resJson.total);
-                    newRecordRequest();
-                }
-            });
-        }
-        newRecordRequest();
-    }
-}
-
+/************************************  AssemIds  *****************************************/
 DataAssembly = {
     AssemIds : function(keyWord){
         var keyIdsObj = CodeIdsData[keyWord];
@@ -386,6 +294,96 @@ DataAssembly = {
             }
         }
         return idsList;
+    },
+    assemDom : function($resObjDataList){
+        var $resObjData = {};
+        var temArr1 = [],temArr2 = [],temArr3 = [],temArr4 = [],temArr5 = [];
+        for(var i=0; i<$resObjDataList.length; i++){
+            var $totalRecord = parseInt($resObjDataList[i]['total']);
+            if($totalRecord >= 80){
+                temArr1.push($resObjDataList[i]);
+            }else if($totalRecord >= 60 && $totalRecord < 80){
+                temArr2.push($resObjDataList[i]);
+            }
+            else if($totalRecord >= 40 && $totalRecord < 60){
+                temArr3.push($resObjDataList[i]);
+            }
+            else if($totalRecord >= 20 && $totalRecord < 40){
+                temArr4.push($resObjDataList[i]);
+            }
+            else{
+                temArr5.push($resObjDataList[i]);
+            }
+        }
+        if(temArr1.length > 0){
+            $resObjData['80~100'] = temArr1;
+        }
+        if(temArr2.length > 0){
+            $resObjData['60~80'] = temArr2;
+        }
+        if(temArr3.length > 0){
+            $resObjData['40~60'] = temArr3;
+        }
+        if(temArr4.length > 0){
+            $resObjData['20~40'] = temArr4;
+        }
+        if(temArr5.length > 0){
+            $resObjData['0~20'] = temArr5;
+        }
+        console.log($resObjData);
+        return $resObjData;
+    }
+}
+/**************************************  Ajax  *******************************************/
+CodeAjax = {
+    commonDataAjax : function($idsList, callback){
+        var currentIndex=0;//退出递归的条件变量
+        var resObjDataList = [];
+        function newRequest(){
+            if(currentIndex>=$idsList.length){
+                return;
+            }
+            var ids = $idsList[currentIndex];
+            $.ajax({
+                type: 'GET',
+                url : 'http://internalapi.csdn.net/knowledge/public/public/api/snippet?x-acl-token=9DeJLGuYSy/6nSmDQen5amEWUh0K&fields=all&ids=' + ids + '&type=codes_snippet&callback=func',
+                /*async: false,*/
+                dataType: 'jsonp',
+                jsonp : 'callback',
+                jsonpCallback : 'func',
+                complete:function(responseObj){
+                    currentIndex++;
+                    var $resJson = responseObj['responseJSON'];
+                    var $codeObj = $resJson.codes[ids];
+                    var $recordObj = $resJson.records[ids];
+                    var temObj = {};
+                    temObj['total'] = $recordObj['total'];
+                    temObj['naming'] = $recordObj['naming'];
+                    temObj['execute'] = $recordObj['execute'];
+                    temObj['blank'] = $recordObj['blank'];
+                    temObj['indent'] = $recordObj['indent'];
+                    temObj['complexity'] = $recordObj['complexity'];
+                    temObj['integrity'] = $recordObj['integrity'];
+                    temObj['lineWidth'] = $recordObj['lineWidth'];
+                    temObj['efficiency'] = $recordObj['efficiency'];
+                    temObj['lineOfCode'] = $recordObj['lineOfCode'];
+                    temObj['blog'] = $recordObj['blog'];
+                    temObj['comments'] = $recordObj['comments'];
+                    temObj['grammar'] = $recordObj['grammar'];
+                    temObj['snippet_line'] = $codeObj['snippet_line'];
+                    temObj['language'] = $codeObj['language'];
+                    temObj['source_user_name'] = $codeObj['source_user_name'];
+                    temObj['created_at'] = $codeObj['created_at'];
+                    temObj['body'] = $codeObj['body'];
+                    resObjDataList.push(temObj);
+                    if(currentIndex === $idsList.length){
+                        callback(DataAssembly.assemDom(resObjDataList));
+                    }
+                    newRequest();
+                }
+            });
+        }
+        newRequest();
     }
 }
 
@@ -425,9 +423,101 @@ $(".btn-fullscreen").click(function(){
     }
 })
 
-/*$(".key_word_list").find("li").click(function(){
-    $(".code_section").find('.code_segment_tit span').html($(this).html());
-});*/
+$(function(){
+    var _url = document.location.href;
+    $('.key_word_list a').each(function(){
+        if(_url.indexOf($(this).attr('href')) > -1){
+            $(this).parent('li').addClass('active');
+            var $keyWord = $(this).parent('li').attr('data-key-words');
+            var $idsList = DataAssembly.AssemIds($keyWord);
+            CodeAjax.commonDataAjax($idsList,function(resData){
+                var $languageType = "";
+                var $containerStr = "";
+                for(key in resData){
+                    if(resData[key].length>0){
+                        $containerStr +=
+                            "<dl class='code_segment'>"
+                                +"<dt class='code_segment_tit'>" + key + "分<span></span>代码片</dt>";
+                        for(var i = 0; i<resData[key].length; i++){
+                            if(resData[key][i]['language'] === "java"){
+                                $languageType = "java";
+                            }else if(resData[key][i]['language'] === "python"){
+                                $languageType = "python";
+                            }else if(resData[key][i]['language'] === "csharp"){
+                                $languageType = "c-sharp";
+                            }else if(resData[key][i]['language'] === "javascript"){
+                                $languageType = "js";
+                            }else if(resData[key][i]['language'] === "php"){
+                                $languageType = "php";
+                            }
+                            $containerStr +=
+                                "<dd class='code_segment_con'>"
+                                    +"<div class='row'>"
+                                        +"<div class='col-md-3 col-sm-3 col-xs-3'>"
+                                            +"<div class='score_table'>"
+                                                +"<table class='table table-bordered table-condensed text-center'>"
+                                                    +"<thead><tr><th>名称</th><th>得分</th></tr></thead>"
+                                                    +"<tbody>"
+                                                        +"<tr><td>total</td><td>" + resData[key][i].total + "</td></tr>"
+                                                        +"<tr><td>naming</td><td>" + resData[key][i].naming + "</td></tr>"
+                                                        +"<tr><td>execute</td><td>" + resData[key][i].execute + "</td></tr>"
+                                                        +"<tr><td>blank</td><td>" + resData[key][i].blank + "</td></tr>"
+                                                        +"<tr><td>indent</td><td>" + resData[key][i].indent + "</td></tr>"
+                                                        +"<tr><td>complexity</td><td>" + resData[key][i].complexity + "</td></tr>"
+                                                        +"<tr><td>integrity</td><td>" + resData[key][i].integrity + "</td></tr>"
+                                                        +"<tr><td>lineWidth</td><td>" + resData[key][i].lineWidth + "</td></tr>"
+                                                        +"<tr><td>efficiency</td><td>" + resData[key][i].efficiency + "</td></tr>"
+                                                        +"<tr><td>lineOfCode</td><td>" + resData[key][i].lineOfCode + "</td></tr>"
+                                                        +"<tr><td>blog</td><td>" + resData[key][i].blog + "</td></tr>"
+                                                        +"<tr><td>comments</td><td>" + resData[key][i].comments + "</td></tr>"
+                                                        +"<tr><td>grammar</td><td>" + resData[key][i].grammar + "</td></tr>"
+                                                    +"</tbody>"
+                                                +"</table>"
+                                                +"<a class='score_desc' data-toggle='modal' href='#modal-recordDesc'>分数计算过程说明<i class='fa fa-question-circle'></i></a>"
+                                            +"</div>"
+                                        +"</div>"
+                                        +"<div class='col-md-9 col-sm-9 col-xs-9'>"
+                                            +"<div class='code_snippets'>"
+                                                +"<h5 class='clearfix code_snippets_header'>"
+                                                    +"<div class='pull-left'>"
+                                                        +"<i class='fa fa-file-text-o'></i>"
+                                                        +"<span>" + resData[key][i]['snippet_line'] + "行</span>"
+                                                        +"<span>" + resData[key][i]['language'] + "</span>"
+                                                        +"<span>作者：<small>" + resData[key][i]['source_user_name'] + "</small></span>"
+                                                        +"<span>时间：<small>" + resData[key][i]['created_at'] + "</small></span>"
+                                                        +"<span class='quality_score'>质量分：<small>" + resData[key][i].total + "</small></span>"
+                                                    +"</div>"
+                                                    +"<div class='btn-group pull-right' role='group' aria-label='...'>"
+                                                        +"<button type='button' class='btn btn-default btn-expand-collapse' data-mod='popu_180'><a href='javascript:;' target='_blank'>展开</a></button>"
+                                                        +"<button type='button' class='btn btn-default btn-fullscreen' data-mod='popu_181'><a href='javascript:;' target='_blank'>全屏</a></button>"
+                                                    +"</div>"
+                                                +"</h5>"
+                                                +"<div class='snippets_con'>"
+                                                    +"<div class='file_content'>"
+                                                        +"<pre name='code' class='brush: " + $languageType + ";'>" + resData[key][i]['body'] + "</pre>"
+                                                    +"</div>"
+                                                +"</div>"
+                                            +"</div>"
+                                        +"</div>"
+                                    +"</div>"
+                                +"</dd>";
+                        }
+                        $containerStr += "</dl>";
+                    }
+                    $(".code_section").html($containerStr);
+                    var $curKeyWords = $(".key_word_list").find('li.active').text();
+                    $(".code_section").find('.code_segment_tit span').text($curKeyWords);
+                }
+            });
+        }
+    });
+
+    SyntaxHighlighter.defaults['smart-tabs'] = true;
+    SyntaxHighlighter.defaults['collapse']="collapse";
+    SyntaxHighlighter.config.bloggerMode = true;
+    SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+    SyntaxHighlighter.all();
+})
 
 
 
