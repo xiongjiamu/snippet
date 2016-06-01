@@ -61,9 +61,9 @@
 .code_segment .code_segment_con:last-child{
     border-bottom: none;
 }
-.code_segment_con .score_table{
-    padding-top: 25px;
-}
+/*.code_segment_con .score_table{
+    padding-top: 10px;
+}*/
 .code_segment_con .score_desc{
     display: inline-block;
     font-size: 16px;
@@ -76,10 +76,31 @@
     font-size: 18px;
     padding-left: 15px;
 }
+.code_segment_con .score_table .code_index{
+    display: block;
+    padding: 0 20px 15px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+
+
+}
+.score_table .code_index small{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 29px;
+    margin-right: 10px;
+    background-color: #169bd5;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+ }
 .score_table .table tr th{
     text-align: center;
 }
-
 
 .code_segment_con .code_snippets{
     border: 1px solid #ddd;

@@ -354,9 +354,12 @@ CodeAjax = {
                 complete:function(responseObj){
                     currentIndex++;
                     var $resJson = responseObj['responseJSON'];
+                    console.log($resJson);
                     var $codeObj = $resJson.codes[ids];
                     var $recordObj = $resJson.records[ids];
                     var temObj = {};
+                    temObj['index'] = currentIndex;
+                    temObj['ids'] = ids;
                     temObj['total'] = $recordObj['total'];
                     temObj['naming'] = $recordObj['naming'];
                     temObj['execute'] = $recordObj['execute'];
@@ -388,7 +391,8 @@ CodeAjax = {
 }
 
 /******************************** EVENT **********************************************/
-//code 展开收起
+
+// code 全屏 退出全屏
 $(".code_section").on("click",".btn-expand-collapse",function(){
     var $fileHolder = $(this).closest("h5").next(".snippets_con");
     var $codeHeight = $fileHolder.find(".file_content").height();
@@ -401,7 +405,7 @@ $(".code_section").on("click",".btn-expand-collapse",function(){
     }
 });
 
-// code 全屏 退出全屏
+//code 展开收起
 $(".code_section").on("click",".btn-fullscreen",function(){
     var $fileHolder = $(this).closest("h5").next(".snippets_con");
     var $codeHeight = $fileHolder.find(".file_content").height();
@@ -424,6 +428,12 @@ $(".code_section").on("click",".btn-fullscreen",function(){
 })
 
 $(function(){
+    SyntaxHighlighter.defaults['smart-tabs'] = true;
+    SyntaxHighlighter.defaults['collapse']="collapse";
+    SyntaxHighlighter.config.bloggerMode = true;
+    SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+    SyntaxHighlighter.all();
+
     var _url = document.location.href;
     $('.key_word_list a').each(function(){
         if(_url.indexOf($(this).attr('href')) > -1){
@@ -455,6 +465,7 @@ $(function(){
                                     +"<div class='row'>"
                                         +"<div class='col-md-3 col-sm-3 col-xs-3'>"
                                             +"<div class='score_table'>"
+                                                +"<span class='code_index'><small>" + resData[key][i].index + "</small>" + resData[key][i].ids + "</span>"
                                                 +"<table class='table table-bordered table-condensed text-center'>"
                                                     +"<thead><tr><th>名称</th><th>得分</th></tr></thead>"
                                                     +"<tbody>"
@@ -488,8 +499,8 @@ $(function(){
                                                         +"<span class='quality_score'>质量分：<small>" + resData[key][i].total + "</small></span>"
                                                     +"</div>"
                                                     +"<div class='btn-group pull-right' role='group' aria-label='...'>"
-                                                        +"<button type='button' class='btn btn-default btn-expand-collapse' data-mod='popu_180'><a href='javascript:;' target='_blank'>展开</a></button>"
-                                                        +"<button type='button' class='btn btn-default btn-fullscreen' data-mod='popu_181'><a href='javascript:;' target='_blank'>全屏</a></button>"
+                                                        +"<button type='button' class='btn btn-default btn-expand-collapse'><a href='javascript:;' target='_blank'>展开</a></button>"
+                                                        +"<button type='button' class='btn btn-default btn-fullscreen'><a href='javascript:;' target='_blank'>全屏</a></button>"
                                                     +"</div>"
                                                 +"</h5>"
                                                 +"<div class='snippets_con'>"
@@ -512,12 +523,10 @@ $(function(){
         }
     });
 
-    SyntaxHighlighter.defaults['smart-tabs'] = true;
-    SyntaxHighlighter.defaults['collapse']="collapse";
-    SyntaxHighlighter.config.bloggerMode = true;
-    SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
-    SyntaxHighlighter.all();
 })
+
+
+
 
 
 
